@@ -1,0 +1,11 @@
+﻿@model Product
+<tr>
+  
+    <partial name="_CellPartial" for="Name" />
+    <td>@Model.Price</td> 
+
+   <td>
+       <a asp-controller="Home" asp-action="Index" asp-route-id="@Model.Id" class="btn btn-sm btn-info text-white">Details</a>
+   </td>
+
+</tr>

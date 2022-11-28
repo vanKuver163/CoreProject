@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Product>
+
+@{
+    decimal average = Model.Average(p => p.Price);
+    ViewBag.Title = "List";
+    ViewData["fruit"] = "apples";
+}
+
+<div class="col-12 m-2">
+    <h2 class="text-white bg-info p-2">All Products</h2>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Product p in Model)
+            {
+                <partial name="_RowPartial" model="p" view-data="ViewData"></partial>
+            }
+        </tbody>
+    </table>
+</div>

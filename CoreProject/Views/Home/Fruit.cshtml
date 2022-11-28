@@ -1,0 +1,23 @@
+﻿@model Product
+
+@{
+    ViewBag.Title = "Fruit";
+}
+
+<div class="col-12 m-2">
+    <h2 class="text-white bg-info p-2">Product</h2>
+    <table class="tabel tabel-striped tabel-bordered">
+        <tbody>
+            <tr>
+                <th>Name</th>
+                <td>@Model.Name</td>
+
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>@Model.Price.ToString("c")</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
